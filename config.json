@@ -1,0 +1,32 @@
+{
+    "categories": [
+        {
+            "label": "feat",
+            "displayName": "Features 🚀"
+        },
+        {
+            "label": "fix",
+            "displayName": "Fixes🐞"
+        },
+        {
+            "label": "refactor",
+            "displayName": "Refactors 🔨"
+        },
+        {
+            "label": "doc",
+            "displayName": "Documentation 🗂"
+        },
+        {
+            "label": "test",
+            "displayName": "Tests 🧪"
+        },
+        {
+            "label": "chore",
+            "displayName": "Chores 👨‍🔧"
+        }
+    ],
+    "uncategorized": {
+        "label": "other",
+        "displayName": "Others 🍾"
+    }
+}

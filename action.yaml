@@ -1,0 +1,21 @@
+name: 'Baic Changelog Generator'
+description: 'Create a basic git changelog'
+outputs:
+  changelog:
+    description: 'The changelog'
+    # need to specify the extra `value` field for `composite` actions
+    value: ${{ steps.generate_changelog.outputs.changelog }}
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  
+    - name: Install Dependencies
+      run: pip install -r requirements.txt
+      shell: bash
+    - name: Generate the changelog
+      id: generate_changelog
+      run: python main.py
+      shell: bash

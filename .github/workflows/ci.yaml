@@ -36,8 +36,6 @@ jobs:
           fetch-depth: '0'
       - name: Generate changelog
         id: get_changelog
-        uses: ./ # Uses an action in the root directory
-        # or use a released GitHub Action
-        # uses: massicer/basic-changelog-generator@1.0.0
+        uses: massicer/basic-changelog-generator@1.0.0
       - name: Print the changelog
         run: echo "${{ steps.get_changelog.outputs.changelog }}"

@@ -46,7 +46,7 @@ def extract_commit_message_from(commits: List[Commit]) -> List[str]:
 
 
 def get_config() -> dict:
-    f = open("config.json")
+    f = open("./config.json")
     return json.load(f)
 
 

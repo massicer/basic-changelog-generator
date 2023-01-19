@@ -9,10 +9,7 @@ from git.objects.commit import Commit
 def run():
     print("Running..")
 
-    # rorepo is a Repo instance pointing to the git-python repository.
-    # For all you know, the first argument to Repo is a path to the repository
-    # you want to work with
-    repo = Repo()
+    repo = Repo(os.environ.get("GITHUB_WORKSPACE") or "")
     print(repo.git)
     tags = get_last_two_tags(repo)
     commits = get_commits_between(repo, tags[1], tags[0])
